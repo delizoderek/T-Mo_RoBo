@@ -42,6 +42,18 @@ public class Mail : MonoBehaviour {
         return Time.timeSinceLevelLoad - deliverTime;
     }
 
+    public GameObject GetGameObject(){
+        return gameObject;
+    }
+
+    public void SetPosition(Vector3 newPosition) {
+        gameObject.transform.position = newPosition;
+    }
+
+    public Vector3 GetPosition() {
+        return gameObject.transform.position;
+    }
+
     override
     public string ToString() {
         return "Floor: " + floor + " Room: " + room + " Weight: " + weight  + " Dimensions: " + gameObject.transform.localScale;
